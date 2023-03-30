@@ -1,0 +1,84 @@
+body{
+    margin: 0px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.div_top{
+    padding-top: 100px;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    text-align: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------
+    INICIO DE SESION
+-----------------------------------------------------------*/
+.div_general{
+    margin-top: 40px;
+    width: 100%;
+    height: 490px;
+    background-color: white;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.div_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    background-color: white;
+}
+.div_login_iniciosesion{
+    height: 80%;
+    background-color: black;
+    width: 50%;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    border-radius: 2px;
+
+}
+.div_login_logo{
+    height: 110px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;    
+    border-radius: 2px;
+}
+.div_login_usucon{
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.imagen{
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+.usucontra{
+    border-radius: 3px;
+}
