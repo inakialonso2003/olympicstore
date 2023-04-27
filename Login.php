@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $servername = "localhost";
@@ -25,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["nickname"] = $row["nickname"];
         header("location: inicio.php");
     } else {
-        $error = "Nombre de usuario, contraseña o nickname incorrecto(s).";
+        $error = "Nombre de usuario, contraseña o nickname incorrecto.";
     }
 }
 ?>
@@ -61,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
         <?php
         if (!empty($error)) {
-            echo "<p>$error</p>";
+            echo '<p style="text-align: center;">' . $error . '</p>';
         }
         ?>
     </body>
