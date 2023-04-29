@@ -107,17 +107,17 @@ body{
     height: 70px;
     width: 300px;
     text-align: center;
-    }
-    
+}
+
 .user_img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     height: 100px;
     width: 100px;
     background-image: url(img/usu.png);
-    }
+}
 
 .cerrarsesion {
     float: right;
@@ -176,7 +176,7 @@ body{
     text-align: center;
     flex-direction: row;
     flex-flow: wrap;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 .div_juegos_tienda{
@@ -294,4 +294,50 @@ a{
     color: white;
     text-decoration: none;
 }
-   
+
+.div_juego_biblio_cod{
+    background-image: url(img/ww2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    text-decoration: none;
+}
+.div_juego_biblio_stree{
+    background-image: url(img/street-fighter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    text-decoration: none;
+}
+.div_juego_biblio_hollow{
+    background-image: url(img/hollowknight.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    text-decoration: none;
+}
+.div_juego_biblio_metal{
+    background-image: url(img/metalgearsolid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 300px;
+    text-decoration: none;
+}
+
+.juego {
+margin-top: 0px;
+    width: 80%;
+    height: 300px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    color: black;
+    text-decoration: none;    
+}

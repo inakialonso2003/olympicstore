@@ -14,7 +14,7 @@ if (!$conn) {
 
 $ID_usuario = $_SESSION["ID_usuario"];
 
-$sql = "SELECT bibliotecas_juegos.ID_biblioteca, bibliotecas_juegos.ID_juego, juegos.nombre, juegos.PEGI 
+$sql = "SELECT bibliotecas_juegos.ID_biblioteca, bibliotecas_juegos.ID_juego, juegos.nombre, juegos.PEGI, juegos.descripcion
                 FROM bibliotecas_juegos 
                 INNER JOIN juegos ON bibliotecas_juegos.ID_juego = juegos.ID_juego
                 INNER JOIN usuarios ON bibliotecas_juegos.ID_biblioteca = usuarios.ID_biblioteca 
@@ -22,12 +22,11 @@ $sql = "SELECT bibliotecas_juegos.ID_biblioteca, bibliotecas_juegos.ID_juego, ju
 ";
 
 $imagenes = array(
-        1 => 'img/metargearsolid.jpg',
-        2 => 'img/street-fighter.jpg',
-        3 => 'img/hollowknight.jpg',
-        4 => 'img/ww2.jpg'
-    );
-    
+    1 => 'img/metargearsolid.jpg',
+    2 => 'img/street-fighter.jpg',
+    3 => 'img/hollowknight.jpg',
+    4 => 'img/ww2.jpg'
+);
 
 $result = mysqli_query($conn, $sql);
 ?>
@@ -46,7 +45,6 @@ $result = mysqli_query($conn, $sql);
         <div class="div_top_tienda">
             <div class="usuario"> 
                 <div class="user_img"></div>
-
                 <?php
                 if (isset($_SESSION['nickname'])) {
                     $nickname = $_SESSION['nickname'];
@@ -66,16 +64,14 @@ $result = mysqli_query($conn, $sql);
         </div>
         <div class="div_general">
             <div class="div_general_tienda"> <br>
-
                 <?php
                 if (isset($result) && mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<div class='juego'>";
-                        echo "<p>ID del juego: " . $row["ID_juego"] . "</p>";
                         echo "<img src='" . $imagenes[$row["ID_juego"]] . "'class='imagen_juegos'> <br>";
                         echo "<b>" . $row["nombre"] . "</b><br>";
                         echo "<p>PEGI: " . $row["PEGI"] . "</p>";
-                        //echo "<p>Descripción: " . $row["descripcion"] . "</p>";
+                        echo "<p>Descripción: " . $row["descripcion"] . "</p>";
                         echo "</div>";
                         echo "<hr>";
                     }
@@ -83,21 +79,7 @@ $result = mysqli_query($conn, $sql);
                     echo "<p>No tienes juegos en tu biblioteca.</p>";
                 }
                 ?> 
-
-
             </div>
         </div>
-        <div class="fondo_fijo">
-            <h1>COMPRA CON TOTAL SEGURIDAD EN TU PAGINA WEB FAVORITA</h1>
-        </div>
     </body>
-    <footer>
-        <div class="metodos_pago">
-            <img src="img/paypal.png" alt="Método de pago 1">
-            <img src="img/visa.png" alt="Método de pago 2">
-            <img src="img/mastercard.png" alt="Método de pago 3">
-            <img src="img/gpay.jpg" alt="Método de pago 5">
-            <img src="img/applepay.jpg" alt="Método de pago 6">
-        </div>
-    </footer>
 </html>

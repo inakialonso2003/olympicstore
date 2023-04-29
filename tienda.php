@@ -34,16 +34,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insertar juego en la tabla juegos
         $sql = "INSERT INTO juegos (ID_juego, nombre, PEGI, descripcion ) VALUES ('$ID_juego', '$nombre', '$PEGI', '$descripcion')";
-        $result = mysqli_query($conn, $sql_insert);
+        $result = mysqli_query($conn, $sql);
 
-        if ($result) {
-            // Redireccionar a la página de inicio
-            header("location: inicio.php");
-        } else {
-            $error = "Error al agregar el juego a la biblioteca.";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $ID_juego = $_POST["ID_juego"];
+            $ID_usuario = $_POST["ID_usuario"];
+
+            $sql = "INSERT INTO bibliotecas_juegos(ID_biblioteca,ID_juego) VALUES ($ID_usuario,$ID_juego)";
+            $result = mysqli_query($conn, $sql);
         }
-    } else {
-        $error = "Nombre de usuario, contraseña o nickname incorrecto.";
+    }
+
+    if ($result) {
+        // Redireccionar a la página de inicio
+        header("location: biblioteca.php");
+
+        $sql = "INSERT INTO bibliotecas_juegos(ID_biblioteca,ID_juego) VALUES ($ID_usuario,1); 
+               INSERT INTO bibliotecas_juegos(ID_biblioteca,ID_juego) VALUES ($ID_usuario,2); 
+               INSERT INTO bibliotecas_juegos(ID_biblioteca,ID_juego) VALUES ($ID_usuario,3); 
+               INSERT INTO bibliotecas_juegos(ID_biblioteca,ID_juego) VALUES ($ID_usuario,4);";
+        $result = mysqli_multi_query($conn, $sql);
     }
 }
 ?>
@@ -62,12 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="usuario"> 
                 <div class="user_img"></div>
 
-<?php
-if (isset($_SESSION['nickname'])) {
-    $nickname = $_SESSION['nickname'];
-    echo '<p>' . $nickname . '</p>';
-}
-?>
+                <?php
+                if (isset($_SESSION['nickname'])) {
+                    $nickname = $_SESSION['nickname'];
+                    echo '<p>' . $nickname . '</p>';
+                }
+                ?>
             </div>
             <div class="cerrarsesion">
                 <a href="Login.php"><button type="submit">Cerrar Sesión</button> </a>
@@ -82,15 +92,55 @@ if (isset($_SESSION['nickname'])) {
         <div class="div_general">
             <h1>ULTIMAS NOVEDADES</h1>
             <div class="div_general_tienda">
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/cod.png" class="imagen_juegos"><b>COD WW2</b><br><p>29.99€</p></div></a>
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/hollow.png" class="imagen_juegos"><b>Hollow Knight</b><br><p>29.99€</p></div></a>
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/mgs.png" class="imagen_juegos"><b>Metal Gear Solid V</b><br><p>15.50€</p></div></a>
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/sfv.png" class="imagen_juegos"><b>Street Fighter</b><br><p>19.99€</p></div></a>
+
+                <!-- Formulario para el juego 1 -->
+                <form action="añadirjuego.php" method="post">
+                    <div class="div_juegos_tienda">
+                        <img src="img/metargearsolid.jpg" class="imagen_juegos">
+                        <b>Metal Gear Solid</b><br>
+                        <p>29.99€</p>
+                        <input type="hidden" name="ID_juego" value="1">
+                        <button type="submit">Agregar al carrito</button>
+                    </div>
+                </form>
+
+                <!-- Formulario para el juego 2 -->
+                <form action="añadirjuego.php" method="post">
+                    <div class="div_juegos_tienda">
+                        <img src="img/street-fighter.jpg" class="imagen_juegos">
+                        <b>Street Fighter</b><br>
+                        <p>29.99€</p>
+                        <input type="hidden" name="ID_juego" value="2">
+                        <button type="submit">Agregar al carrito</button>
+                    </div>
+                </form>
+
+                <!-- Formulario para el juego 3 -->
+                <form action="añadirjuego.php" method="post">
+                    <div class="div_juegos_tienda">
+                        <img src="img/hollowknight.jpg" class="imagen_juegos">
+                        <b>Hollow Knight</b><br>
+                        <p>15.50€</p>
+                        <input type="hidden" name="ID_juego" value="3">
+                        <button type="submit">Agregar al carrito</button>
+                    </div>
+                </form>
+                
+                <form action="añadirjuego.php" method="post">
+                    <div class="div_juegos_tienda">
+                        <img src="img/ww2.jpg" class="imagen_juegos">
+                        <b>Call Of Duty WW2</b><br>
+                        <p>29.99€</p>
+                        <input type="hidden" name="ID_juego" value="4">
+                        <button type="submit">Agregar al carrito</button>
+                    </div>
+                </form>
+
+
+            </div> 
+            <div class="fondo_fijo">
+                <h1>COMPRA CON TOTAL SEGURIDAD EN TU PAGINA WEB FAVORITA</h1>
             </div>
-        </div>
-        <div class="fondo_fijo">
-            <h1>COMPRA CON TOTAL SEGURIDAD EN TU PAGINA WEB FAVORITA</h1>
-        </div>
     </body>
     <footer>
         <div class="metodos_pago">

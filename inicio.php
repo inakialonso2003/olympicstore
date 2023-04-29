@@ -34,17 +34,17 @@
         <div class="div_general">
             <div class="banner_ps"></div>
             <div class="div_general_inicio">
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/cod.png" class="imagen_juegos"><b>COD WW2</b><br><p>29.99€</p></div></a>
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/hollow.png" class="imagen_juegos"><b>Hollow Knight</b><br><p>29.99€</p></div></a>
-                <a href="codmw2.html"><div class="div_juegos_tienda"><img src="img/mgs.png" class="imagen_juegos"><b>Metal Gear Solid V</b><br><p>15.50€</p></div></a>
+                <div class="div_juegos_tienda"><img src="img/cod.png" class="imagen_juegos"><b>COD WW2</b><br><p>29.99€</p></div>
+                <div class="div_juegos_tienda"><img src="img/hollow.png" class="imagen_juegos"><b>Hollow Knight</b><br><p>29.99€</p></div>
+                <div class="div_juegos_tienda"><img src="img/mgs.png" class="imagen_juegos"><b>Metal Gear Solid V</b><br><p>15.50€</p></div>
                 <div class="div_juegos_tienda"><img src="img/sfv.png" class="imagen_juegos"><b>Street Fighter</b><br><p>19.99€</p></div>
             </div>
             <div class="banner_pc"></div>
             <div class="div_general_inicio">
-                <a href=""><div class="div_juegos_tienda"><img src="img/aitd.png" class="imagen_juegos"><b>Alone in the Dark</b><br><p>proximamente</p></div></a>
-                <a href=""><div class="div_juegos_tienda"><img src="img/tloz.png" class="imagen_juegos"><b>The Legends of Zelda Tears of the kingdom</b><br><p>proximamente</p></div></a>
-                <a href=""><div class="div_juegos_tienda"><img src="img/deadisland.png" class="imagen_juegos"><b>Dead Island 2</b><br><p>proximamente</p></div></a>
-                <a href=""><div class="div_juegos_tienda"><img src="img/swjs.png" class="imagen_juegos"><b>Star Wars Jedi Survivor</b><br><p>proximamente</p></div></a>
+                <div class="div_juegos_tienda"><img src="img/aitd.png" class="imagen_juegos"><b>Alone in the Dark</b><br><p>Proximamente</p></div>
+                <div class="div_juegos_tienda"><img src="img/tloz.png" class="imagen_juegos"><b>The Legends of Zelda Tears of the kingdom</b><br><p>Proximamente</p></div>
+                <div class="div_juegos_tienda"><img src="img/deadisland.png" class="imagen_juegos"><b>Dead Island 2</b><br><p>Proximamente</p></div>
+                <div class="div_juegos_tienda"><img src="img/swjs.png" class="imagen_juegos"><b>Star Wars Jedi Survivor</b><br><p>Proximamente</p></div>
             </div>
             <div class="banner_zelda"></div>
         </div>
