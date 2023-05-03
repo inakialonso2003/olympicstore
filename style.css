@@ -83,7 +83,15 @@ body{
 .usucontra{
     border-radius: 3px;
 }
+<<<<<<< HEAD
 
+=======
+/---------------------------------------------------------
+    TIENDA
+-----------------------------------------------------------/
+
+/MENU/
+>>>>>>> 754177d3f66668cc94c9d69a3984462fce2b20ac
 .div_top_tienda{
     padding-top: 100px;
     width: 100%;
@@ -99,6 +107,7 @@ body{
     font-weight: bold;
     position: fixed;
 }
+<<<<<<< HEAD
 
 .div_top_tienda_inicio{
     padding-top: 100px;
@@ -156,6 +165,8 @@ body{
     font-size: 17px;
     height: 30px;
 }
+=======
+>>>>>>> 754177d3f66668cc94c9d69a3984462fce2b20ac
 .menu_tienda{
     margin-top: 250px;
     position: fixed;
@@ -171,7 +182,11 @@ body{
 }
 .menu_tienda>a{
     display: block;
+<<<<<<< HEAD
     padding: 20px 20px !important;
+=======
+    padding: 20px 20px;
+>>>>>>> 754177d3f66668cc94c9d69a3984462fce2b20ac
     color: black;
     text-decoration: none;
     text-align: center;
@@ -184,6 +199,7 @@ body{
     color: white;
     transition: 40ms;
 }
+<<<<<<< HEAD
 .div_general_tienda{
     margin-top: 330px;
     width: 80%;
@@ -366,3 +382,5 @@ margin-top: 0px;
     width: 40%;
     height: 25%;
 }
+=======
+>>>>>>> 754177d3f66668cc94c9d69a3984462fce2b20ac
