@@ -62,12 +62,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>OLYMPIC STORE</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        
         <div class="div_top_tienda">
             <div class="usuario"> 
                 <div class="user_img"></div>
@@ -82,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="cerrarsesion">
                 <a href="Login.php"><button type="submit">Cerrar Sesión</button> </a>
             </div>
-            OLIMPICSTORE
+            OLYMPIC STORE
         </div>
         <div class="menu_tienda">
             <a href="inicio.php">INICIO</a>

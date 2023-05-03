@@ -40,8 +40,11 @@ $result = mysqli_query($conn, $sql);
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+
+        
     </head>
     <body>
+        <header>
         <div class="div_top_tienda">
             <div class="usuario"> 
                 <div class="user_img"></div>
@@ -55,8 +58,9 @@ $result = mysqli_query($conn, $sql);
             <div class="cerrarsesion">
                 <a href="Login.php"><button type="submit">Cerrar Sesión</button> </a>
             </div>
-            OLIMPICSTORE
+            OLYMPIC STORE
         </div>
+        </header>
         <div class="menu_tienda">
             <a href="inicio.php">INICIO</a>
             <a href="biblioteca.php" style="background-color: black; color: white;">BIBLIOTECA</a>

@@ -1,3 +1,4 @@
+
 body{
     margin: 0px;
     color: black;
@@ -28,6 +29,7 @@ body{
     align-content: center;
     flex-direction: row;
     flex-flow: wrap;
+    color: black;
 }
 .div_login{
     display: flex;
@@ -98,6 +100,22 @@ body{
     position: fixed;
 }
 
+.div_top_tienda_inicio{
+    padding-top: 100px;
+    width: 100%;
+    height: 232px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    font-size: 28px;
+    font-weight: bold;
+    position: fixed;
+}
+
 .usuario {
     float: left;
     position: absolute;
@@ -153,7 +171,7 @@ body{
 }
 .menu_tienda>a{
     display: block;
-    padding: 20px 20px;
+    padding: 20px 20px !important;
     color: black;
     text-decoration: none;
     text-align: center;
@@ -183,6 +201,7 @@ body{
     width: 200px;
     height: 300px;
     text-decoration: none;
+    color: black;
 }
 .imagen_juegos{
     width: 200px;
@@ -277,7 +296,7 @@ a{
     text-align: center;
     flex-direction: row;
     flex-flow: wrap;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -340,4 +359,10 @@ margin-top: 0px;
     flex-flow: wrap;
     color: black;
     text-decoration: none;    
+}
+
+#carouselExampleIndicators {
+    margin-top: 10px;
+    width: 40%;
+    height: 25%;
 }
