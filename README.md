@@ -57,4 +57,15 @@
 
         En esta vista lo que podemos observar es el identificador de usuario, su nickname, el ID_juego, el nombre del juego y el PEGI. 
 
+# PHP
+        Nuestro proyecto basa en 8 documentos PHP:
+        1.-Login.php: Aqui el usuario inicia sesión y se conecta a la base de datos sql y valida el usuario y su contraseña.
+        2.-Añadirjuego.php: Aquí añadimos la lógica para añadir juegos en la biblioteca del usuario.
+        3.-Biblioteca.php: Aquí muestra los juegos que tiene el usuario con el que hemos iniciado sesión conectandose a su biblioteca en la base de datos.
+        4.-inicio.php: Esto es el inicio de nuestra página web, tenemos un carousel hecho con boostrap donde mostramos varias imagenes de los juegos que tenemos a la venta.
+        5.-registrar.php: Aquí añadimos la lógica para que un usuario pueda registrase en nuestra página web.
+        6.-tienda.php: Aquí añadimos la lógica para que una usuario pueda comprarse un juego de nuestro catálogo de juegos a la venta.
+        
+# Style
+         Nuestro proyecto tiene un estílo único, puedes desplazarte de manera simple.
         
