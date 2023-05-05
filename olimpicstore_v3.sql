@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-04-2023 a las 11:46:40
+-- Tiempo de generación: 05-05-2023 a las 09:50:35
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `olimpicstore_v2`
+-- Base de datos: `olimpicstore_v3`
 --
 
 DELIMITER $$
@@ -65,7 +65,8 @@ INSERT INTO `bibliotecas` (`ID_biblioteca`) VALUES
 (1),
 (2),
 (3),
-(4);
+(4),
+(5);
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,9 @@ INSERT INTO `bibliotecas_juegos` (`ID_biblioteca`, `ID_juego`) VALUES
 (2, 2),
 (2, 3),
 (3, 1),
-(3, 4);
+(3, 3),
+(3, 4),
+(4, 4);
 
 -- --------------------------------------------------------
 
@@ -149,7 +152,7 @@ CREATE TABLE `juegos_usuarios` (
 --
 
 CREATE TABLE `usuarios` (
-  `ID_usuario` int(3) NOT NULL AUTO_INCREMENT,
+  `ID_usuario` int(3) NOT NULL,
   `ID_biblioteca` int(3) DEFAULT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `nickname` varchar(50) DEFAULT NULL,
@@ -164,7 +167,8 @@ INSERT INTO `usuarios` (`ID_usuario`, `ID_biblioteca`, `nombre`, `nickname`, `co
 (1, 1, 'Iñaki', 'ElLocoMoroco', 'iñaki'),
 (2, 2, 'Ismael', 'Xx_Isma_xX', 'ismael'),
 (3, 3, 'Abderrahman', 'AbdeGamerXD', 'abde'),
-(4, 4, 'Asier', 'Faze_AsierPro', 'asier');
+(4, 4, 'Asier', 'NotOtaku', 'asier'),
+(5, 5, 'prueba', 'prueba', 'prueba');
 
 --
 -- Disparadores `usuarios`
@@ -224,24 +228,17 @@ ALTER TABLE `juegos`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`ID_usuario`),
-  ADD KEY `ID_biblioteca` (`ID_biblioteca`);
+  ADD KEY `fk_biblioteca` (`ID_biblioteca`);
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `bibliotecas_juegos`
---
-ALTER TABLE `bibliotecas_juegos`
-  ADD CONSTRAINT `bibliotecas_juegos_ibfk_1` FOREIGN KEY (`ID_biblioteca`) REFERENCES `bibliotecas` (`ID_biblioteca`),
-  ADD CONSTRAINT `bibliotecas_juegos_ibfk_2` FOREIGN KEY (`ID_juego`) REFERENCES `juegos` (`ID_juego`);
-
---
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`ID_biblioteca`) REFERENCES `bibliotecas` (`ID_biblioteca`);
+  ADD CONSTRAINT `fk_biblioteca` FOREIGN KEY (`ID_biblioteca`) REFERENCES `bibliotecas` (`ID_biblioteca`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

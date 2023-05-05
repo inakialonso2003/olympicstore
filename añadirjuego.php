@@ -9,7 +9,7 @@ if (!isset($_SESSION["ID_usuario"])) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "olimpicstore_v2";
+$dbname = "olimpicstore_v3";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
